@@ -52,40 +52,34 @@ document.querySelector('#divideNumbers').addEventListener('click',divideNumbers)
 
 let currentDate = new Date();
 
-let currentYear = new Year();
+let currentYear;
 
 currentYear = currentDate.getFullYear();
 
-document.getElementById('year').value = currentYear;
+document.querySelector('#year').value = currentYear;
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 
-document.getElementById('array').textContent = numbersArray.join(", ");
+document.querySelector('#array').innerHTML = numbersArray;
 
 /* Output Odds Only Array */
 
-let oddNumbers = numbersArray.filter(num => num % 2 === 1);
-document.getElementById('odds').textContent = oddNumbers.join(", ");
+document.querySelector('#odds').innerHTML = numbersArray.filter(number => number % 2 === 1);
 
 /* Output Evens Only Array */
 
-let evenNumbers = numbersArray.filter(num => num % 2 === 0);
-document.getElementById('evens').textContent = evenNumbers.join(", ");
+document.querySelector('#evens').innerHTML = numbersArray.filter(number => number % 2 === 0);
 
 /* Output Sum of Org. Array */
 
-const sumOfArray = numbersArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-document.getElementById('sumOfArray').textContent = sumOfArray;
+document.querySelector('#sumOfArray').innerHTML = numbersArray.reduce((sum, number) => sum + number);
 
 /* Output Multiplied by 2 Array */
 
-const multipliedArray = numbersArray.map(number => number * 2);
-document.getElementById('multiplied').textContent = multipliedArray.join(", ");
-
+document.querySelector('#multiplied').innerHTML = numbersArray.map(number => number * 2);
 
 /* Output Sum of Multiplied by 2 Array */
 
-const sumOfMultiplied = numbersArray.map(number => number * 2).reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-document.getElementById('sumOfMultiplied').textContent = sumOfMultiplied;
+document.querySelector('#sumOfMultiplied').innerHTML = numbersArray.map(number => number * 2).reduce((sum, number) => sum + number);
