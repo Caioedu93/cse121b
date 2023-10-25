@@ -1,3 +1,6 @@
+
+
+
 /* Universal Selector */
 * {
   margin: 0;
@@ -7,7 +10,7 @@
 
 /* HTML Selectors */
 body {
-  font-family: 'Roboto', Helvetica, sans-serif;
+  font-family: 'Henny Penny','Noto Serif Makasar' , 'Roboto', Helvetica, sans-serif;
   background-color: #777;
 }
 
@@ -68,6 +71,7 @@ h1, h2 {
 
 h1 {
 border-bottom: 1px solid #a70f0f;
+font-family:"Henny Penny";
 }
 
 h2 {
@@ -106,7 +110,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px
+  margin: 10px;
+  font-family: 'Henny Penny';
 }
 
 label {
